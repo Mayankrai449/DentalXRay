@@ -15,9 +15,9 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 def generate_diagnostic_report(predictions: List[Dict]) -> Dict:
     try:
         prompt = f"""
-You are an expert dental radiologist. Based on the provided image annotations from an object detection model, generate a diagnostic report in professional clinical language. The annotations include detected pathologies, their locations (bounding box coordinates), and confidence scores. Output a JSON object with the following structure:
-- "Diagnosis": A brief paragraph summarizing detected pathologies and their locations (e.g., upper left molar, if inferable from coordinates) with some insights and diagnosis information.
-- "Details": A list of objects, each containing pathology name, location (e.g., upper left molar), coordinates (x, y, width, height), and confidence score.
+You are an expert dental radiologist. Based on the provided image annotations from an object detection model, generate a diagnostic report in professional clinical language. The annotations include detected pathologies, their locations (bounding box coordinates). Output a JSON object with the following structure:
+- "Diagnosis": A brief paragraph summarizing detected pathologies and their locations (e.g., upper left molar, if inferable from coordinates) with some insights and diagnosis information. Don't mention coordinates or confidence scores.
+- "Details": A list of objects, each containing pathology name, location (e.g., upper left molar).
 - "ClinicalAdvice": A list of actionable recommendations for the patient or dentist.
 Ensure the report is clear, concise, and suitable for clinical use.
 Annotations: {json.dumps(predictions)}
