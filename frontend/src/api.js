@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://dentalxray-fre1.onrender.com',
+  baseURL: 'https://dentalxray-production.up.railway.app',
   headers: { 'Content-Type': 'multipart/form-data' },
 });
 
