@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000',
+  baseURL: 'https://dentalxray-fre1.onrender.com',
   headers: { 'Content-Type': 'multipart/form-data' },
 });
 

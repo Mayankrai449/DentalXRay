@@ -22,7 +22,7 @@ const LeftPanel = ({ response, error, fileName }) => {
         <div className="image-container">
           <img
             src={`data:image/jpeg;base64,${response.image}`}
-            alt="Annotated Image"
+            alt=""
             className="annotated-image"
           />
           <p className="image-caption">{fileName}</p>
