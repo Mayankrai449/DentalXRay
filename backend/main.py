@@ -1,0 +1,13 @@
+from fastapi import FastAPI
+from routes.detect_route import router
+from dotenv import load_dotenv
+
+load_dotenv()
+
+app = FastAPI(title="Dental Pathology Detection")
+
+app.include_router(router)
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
