@@ -20,6 +20,8 @@ Dental AI Pathology combines computer vision and natural language processing to 
 
 ![Main](/images/main.png)
 
+
+Live Link: [Dental AI Pathology](https://dentalxray-frontend.onrender.com/)
 ## Setup Instructions
 
 ### Prerequisites
